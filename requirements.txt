@@ -5,3 +5,7 @@ geopandas
 contextily
 folium
 seaborn
+earthengine-api 
+requests 
+tqdm
+python-dotenv
