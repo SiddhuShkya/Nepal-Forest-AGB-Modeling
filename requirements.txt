@@ -4,3 +4,4 @@ matplotlib
 geopandas
 contextily
 folium
+seaborn
