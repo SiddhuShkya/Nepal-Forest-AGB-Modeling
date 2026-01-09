@@ -1,2 +1,4 @@
 venv/
 data/
+.env
+service-account-key.json
