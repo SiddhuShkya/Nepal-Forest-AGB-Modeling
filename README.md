@@ -18,13 +18,15 @@ This dataset includes georeferenced plot-level forest carbon estimates for Nepal
 
 ---
 
-The map below visualizes the spatial distribution of the sampled forest plots across Nepal, illustrating the coverage of AGB measurements used in this study.
+> The map below visualizes the spatial distribution of the sampled forest plots across Nepal, illustrating the coverage of AGB measurements used in this study.
 
 <img src="images/nepal_agb_map.png"
      alt="Astro project template"
      style="border:1px solid white; padding:1px; background:#fff; width: 3000px" />
 
 ## Repository Structure
+
+> The project is organized into clear workflows for handling field data and satellite imagery separately before integration.
 
 ```text
 .
@@ -46,8 +48,6 @@ The map below visualizes the spatial distribution of the sampled forest plots ac
 ├── 📄 service-account-key.json     ## GEE account key (Your own key here)
 └── 📁 venv                         ## Python virtual environment
 ``` 
-
-The project is organized into clear workflows for handling field data and satellite imagery separately before integration.
 
 ---
 
