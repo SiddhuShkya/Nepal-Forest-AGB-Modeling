@@ -2,6 +2,27 @@
 
 This project aims to estimate **Above Ground Biomass (AGB)** in Nepal's forests by combining field inventory data with satellite imagery. It utilizes a machine learning approach to model forest carbon based on geospatial and ground-truth data.
 
+---
+
+### Project Methodology Overview
+
+The project follows a systematic workflow divided into two parallel pipelines that converge for model training:
+
+```
+Field Data Pipeline                    Satellite Data Pipeline
+├── Data Understanding                ├── GeoJSON Extraction
+├── Data Preprocessing                └── Satellite Image Fetching
+├── Data Visualization                    ↓
+└── Data Preparation                      ↓
+        ↓                                 ↓
+        └──────────────┬──────────────────┘
+                       ↓
+                Model Training
+                (Future Step)
+```
+
+---
+
 ## Dataset
 The project relies on plot-level estimates from Nepal's national forest inventory (2010-2014).
 
@@ -30,23 +51,23 @@ This dataset includes georeferenced plot-level forest carbon estimates for Nepal
 
 ```text
 .
-├── 📁 data                         ## Folder containing all the data for the research and project
-│   ├── 📁 field-data               ## Folder that contains all the saved field (ground-truth) data
-│   ├── 📁 geojson-data             ## Folder that contains geo-location information of each plots
-│   └── 📁 satellite-images         ## Folder that contains satellite images (bands) of our plots
-├── 📁 docs                         ## Important documents 
-├── 📄 .env.example                 ## Environment variables for Google Earth Engine (GEE)
-├── 📁 .git                         ## Folder used by the git to manage our project's version control
-├── 📄 .gitignore                   ## File to specify files and folder that needs to be ignored by the git
-├── 📁 images                       ## Saved images and plots
-├── 📁 notebooks                    ## Folder containing all our notebook files 
-│   ├── 📁 Field-Data               ## Notebook file for handling field data
-│   └── 📁 Satellite-Data           ## Notebook file for handling satellite imagery data
-├── 📄 README.md                    ## Project/Repo Description
-├── 📄 requirements.txt             ## Project's dependencies
-├── 📁 research                     ## Research paper similar to our study
-├── 📄 service-account-key.json     ## GEE account key (Your own key here)
-└── 📁 venv                         ## Python virtual environment
+├── 📁 data                      ## Folder containing all the data for the research and project
+│   ├── 📁 field-data            ## Folder that contains all the saved field (ground-truth) data
+│   ├── 📁 geojson-data          ## Folder that contains geo-location information of each plots
+│   └── 📁 satellite-images      ## Folder that contains satellite images (bands) of our plots
+├── 📁 docs                      ## Important documents 
+├── 📄 .env.example              ## Environment variables for Google Earth Engine (GEE)
+├── 📁 .git                      ## Folder used by the git to manage our project's version control
+├── 📄 .gitignore                ## File to specify files and folder that needs to be ignored by the git
+├── 📁 images                    ## Saved images and plots
+├── 📁 notebooks                 ## Folder containing all our notebook files 
+│   ├── 📁 Field-Data            ## Notebook file for handling field data
+│   └── 📁 Satellite-Data        ## Notebook file for handling satellite imagery data
+├── 📄 README.md                 ## Project/Repo Description
+├── 📄 requirements.txt          ## Project's dependencies
+├── 📁 research                  ## Research paper similar to our study
+├── 📄 service-account-key.json  ## GEE account key (Your own key here)
+└── 📁 venv                      ## Python virtual environment
 ``` 
 
 ---
